@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<!--Default language german, reading from l. to r.-->
+
+<head>
+    <meta charset="utf-8">
+    <!--Default character set: https://www.w3schools.com/html/html_charset.asp-->
+    <title>COVjs-19</title>
+    <!--Tab title-->
+    <meta name="description" content="">
+    <!--Description of web page-->
+    <meta name="keywords" content="">
+    <!--define keywords for search engines-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Responsive web design:https://www.w3schools.com/css/css_rwd_viewport.asp-->
+
+    <link rel="icon" href="/public/images/SarsCov-2.svg">
+    <!--Tab image-->
+
+    <!--MAXcdn:-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!--Bootstrap.css-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--jQuery.js-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!--Bootstrap.js-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <!--Chart.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxy/1.6.1/scripts/jquery.ajaxy.min.js"></script>
+    <!--jQuery-ajaxy-->
+
+    <link rel="stylesheet" href="public/css/style.css">
+
+    <script src="public/js/case_data_gym.js"></script>
+    <!--JS script to display graphs based on gL_cases.json and gL_quarantine.json-->
+    <script src="public/js/general.js"></script>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!--Bootstrap container-->
+
+        <!--<object data="/public/templates/header.html" width="100%"></object>-->
+        <div class="row" id="header">
+            <a href="/"><img id="logo-img" src="/public/images/SarsCov-2.svg" alt="Virus"></a>
+            <a href="/">
+                <p id="logo-name">C☣︎Vjs-19</p>
+            </a>
+        </div>
+
+        <div class="row" id="navbar">
+            <!--Generate nav menu to switch between pages-->
+            <div class="col-md-1 active" id="nav"><a href="/index.html">Gymnasium Liestal</a></div>
+            <div class="col-md-1" id="nav"><a href="/views/worldwide.html">International</a></div>
+            <div class="col-md-1" id="nav"><a href="/views/switzerland.html">Schweiz</a></div>
+        </div>
+
+        <span class="badge badge-warning">W.I.P.</span>
+        <div class="row" id="info">
+            <!--Display Info alert about webpage-->
+            <div class="alert alert-info alert-dismissible">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <span class="badge badge-info"><strong>Info:</strong></span>
+                The goal of this demo-project was to develop a web application which shows the
+                development of the Covid-19 Pandemic in 2020ff. This should be achieved by using JS/JSON/nodeJS/npm.
+                This work is just an educational project. No warranty granted for any data displayed on this page.<br>
+                In case of any problems, please contact <a
+                    href="mailto:e239284@edu.sbl.ch?subject=Problem at COVjs-19 page&body=Dear Creator, my problem is as follows:">the
+                    creator.</a>
+                <!--Mailto links: https://css-tricks.com/snippets/html/mailto-links/-->
+            </div>
+            <div class="alert alert-danger alert-dismissible">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                The development of this page was stopped due to end of project. For further information, please contact
+                the author. (5/2021)
+            </div>
+        </div>
+
+
+        <div id="reload">
+            <p>Letztes Update:</p>
+            <span id="last-reload">02.07.2021</span>
+        </div>
+
+        <div class="col-12" id="progress">
+            <!--Show overall cases in selected area-->
+            <h5>Infektionsausbreitung: <span id="spread"></span></h5>
+            <div class="progress">
+                <!--https://www.w3schools.com/bootstrap4/bootstrap_progressbars.asp-->
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" id="c_GYM"
+                    role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
+                <!--aria-valuenow: actual value; aria-valuemin: minimum of progressbar; aria-valuemax: maximum of progressbar-->
+            </div>
+            Herdenimmunität (<span id="herd-immunity-display"></span>): <span id="prediction"></span>
+        </div>
+
+        <div class="row" id="graphs">
+            <div class="col-md-6">
+                <h5>Fallzahlen pro Woche</h5>
+                <canvas id="cases_gym"></canvas>
+                <script src="/public/js/case_data_gym.js"></script>
+                <!--Src information-->
+                <p class="src">Src: <span>Mails@gymLi</span></p>
+                <!--#Total cases-->
+                Totalinfektionen: <span id="total"></span>
+            </div>
+            <div class="col-md-6">
+                <h5>Quarantänefälle pro Woche</h5>
+                <span id="total"></span>
+                <canvas id="quarantine_gym"></canvas>
+                <script src="/public/js/quarantine_data_gym.js"></script>
+                <p class="src">Src: <span>Mails@gymLi</span></p>
+            </div>
+
+        </div>
+
+        <div class="row" id="r-calc">
+            <div class="col-12">
+                <p style="font-size: xx-large; text-align: center; font-family:'Baskerville';font-style: italic;">
+                    Herdenimmunität =1– <sup>1</sup>/<sub><span id=r></span></sub></p>
+                <!--Display as fraction-->
+            </div>
+            <p>INFO: Der R-Wert sagt aus, wieviele Personen von einer infizierten Person angesteckt werden.</p>
+        </div>
+        <div class="row">
+            <div class="col-12" id="slidecontainer">
+                <p>0</p>
+                <input type="range" min="0.1" max="10" value="4.5" step="0.1" class="slider" id="myRange"
+                    onchange="location.reload()">
+                <!--min: minimum value; max: maximum value; step: step size for sliding; value = default value (seems to be 4.5)-->
+                <p>10</p>
+            </div>
+        </div>
+
+        <hr>
+        <div id="info_video">
+            <h4>Weitere Informationen:</h4> <br>
+            <iframe src="https://www.youtube.com/embed/yGX4u5XfzVs" frameborder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen="false" alt="#StayTheF*ckHome"></iframe>
+        </div>
+        <div>
+            <img src="https://www.bag.admin.ch/bag/de/home/krankheiten/ausbrueche-epidemien-pandemien/aktuelle-ausbrueche-epidemien/novel-cov/massnahmen-des-bundes/_jcr_content/par/image/image.imagespooler.png/1610543701355/Regeln_Empfehlungen.png"
+                alt="Regeln_Empfehlungen" id="flyer"></img>
+        </div>
+        <p class="src" style="margin-right: 20%; margin-bottom: 0px;">Src: <span>https://bag.admin.ch</span></p>
+        <br>
+        <img id="flyer" src="/public/images/Langzeitfolgen.jpg" alt="Langzeitfolgen.img">
+        <p class="src" style="margin-right: 20%; margin-bottom: 0px;">Src: <span>instagram.com/@quarks.de</span></p>
+
+        <hr>
+        <div class="row" id="footer">
+            <div class="col-3" id="placeholder"></div>
+            <div class="col-3">©Yannick Spriessler 2021</div>
+            <div class="col-3"><a href="./public/Documentation/COVjs19-documentation.pdf"
+                    target="_blank">Documentation</a></div>
+            <div class="col-3" id="placeholder"></div>
+        </div>
+    </div>
+
+    <script src="public/js/case_data_gym.js"></script>
+    <!--JS script to display graphs based on case_data_gym.js and quarantine_data_gym.js-->
+    <script>
+        //Show chromium-based broken slider only in better firefox ;)
+        if (navigator.userAgent.toLowerCase().indexOf("firefox") > -1) {
+            $("#slidecontainer").style.display;
+        }
+        else {
+            $("#slidecontainer").hide();
+        }</script>
+</body>
+
+</html>

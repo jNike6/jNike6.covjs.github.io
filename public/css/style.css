@@ -1,0 +1,168 @@
+body {
+  background-color: #171717;
+  color: whitesmoke;
+}
+
+#header {
+  background-color: #232323;
+  height: 70px;
+  margin-bottom: 5px;
+  position: relative;
+  border-bottom: 1px solid whitesmoke;
+}
+
+.row:not(#header):not(#footer) {
+  margin: 10px; /*margin:10px for every row except for #header and #footer*/
+}
+
+.col {
+  background-color: #202020;
+  margin: 5px;
+}
+
+#logo-img {
+  height: 50px;
+  width: 50px;
+  margin-top: 10px;
+  margin-left: 25px;
+  position: relative;
+  display: block;
+}
+
+#logo-name {
+  position: relative;
+  color: whitesmoke;
+  margin-left: 20px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 40px;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: left;
+  display: inline-block;
+}
+
+.alert-info {
+  width: 95%;
+  margin-left: 2.5%;
+  color: whitesmoke;
+  background-color: rgba(29, 172, 238, 0.37);
+  border: 1px solid rgb(58, 136, 209);
+  border-left: 8px solid rgb(58, 136, 209);
+}
+
+.alert-danger {
+  width: 95%;
+  margin-left: 2.5%;
+  color: whitesmoke;
+  background-color: rgba(238, 29, 29, 0.37);
+  border: 1px solid red;
+  border-left: 8px solid red;
+}
+
+#nav {
+  padding: 10px;
+  background-color: rgb(46, 46, 46);
+  margin: 2px;
+  text-align: center;
+  min-width: 25%;
+}
+
+#nav a {
+  color: whitesmoke;
+}
+
+#nav.active a {
+  color: red;
+}
+
+#reload {
+  color: whitesmoke;
+  text-align: right;
+  margin-right: 10px;
+  position: relative;
+}
+
+.progress {
+  width: 100%;
+  background-color: rgba(29, 172, 238, 0.37);
+  margin-bottom: 20px;
+}
+
+#graphs {
+  margin-top: 20px;
+}
+
+#slidecontainer {
+  position: absolute; /*Prevent page overflow*/
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex; /*Align elements horizontally centered*/
+}
+
+.slider {
+  /*Use class bc. input could be used multiple times :)*/
+  -webkit-appearance: none; /*Reset default css settings; !Dont use if avoidable!*/
+  appearance: none;
+  width: 90%; /*Slider width*/
+  height: 20px; /*Slider height*/
+  border-radius: 30px; /*Round edges*/
+  background: rgba(29, 172, 238, 0.2); /*Slider background*/
+  outline: none; /*Remove outline*/
+  opacity: 0.7; /*Changes on mouse hover*/
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  opacity: 1; /*Slider opacity while hovering*/
+}
+
+.slider::-webkit-slider-thumb,
+.slider::-moz-range-thumb {
+  /*Change handle for browsers*/
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  border-radius: 15px;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: rgb(63, 162, 255);
+  cursor: pointer; /* Cursor on hover */
+}
+
+#info_video {
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center;
+  width: 60%;
+}
+
+#flyer {
+  margin-top: 30px;
+  width: 60%;
+  position: relative;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 30px;
+}
+
+.src {
+  background-color: rgb(46, 46, 46);
+  text-align: right;
+  font-size: small;
+  display: inline;
+  position: relative;
+  color: grey;
+  float: right;
+}
+.src span {
+  color: whitesmoke;
+}
+
+#footer {
+  border-top: 1px solid whitesmoke;
+  padding: 10px;
+  font-size: small;
+  background-color: #232323;
+  text-align: center;
+}
