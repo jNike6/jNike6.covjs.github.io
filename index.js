@@ -37,4 +37,4 @@ app.listen(port, hostname, () => {
     console.log(`Connected successfully. Server running at http://${hostname}:${port}/`);       //${}: Reference on hostname and port
 });
 //Listen for deploy
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || port);
