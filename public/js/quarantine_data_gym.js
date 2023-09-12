@@ -5,70 +5,70 @@
 var jsonfile = {
     "jsonarray": [{     //Create JSON array
         "date": "preCount",
-        "quarantine": NaN
+        "quarantine": N / A
     }, {
         "date": "23.10.20",
-        "quarantine": 6
+        "quarantine": N / A
     }, {
         "date": "30.10.20",
-        "quarantine": 39
+        "quarantine": N / A
     }, {
         "date": "06.11.20",
-        "quarantine": 39
+        "quarantine": N / A
     }, {
         "date": "13.11.20",
-        "quarantine": 21
+        "quarantine": N / A
     }, {
         "date": "20.11.20",
-        "quarantine": 12
+        "quarantine": N / A
     }, {
         "date": "27.11.20",
-        "quarantine": 16
+        "quarantine": N / A
     }, {
         "date": "04.12.20",
-        "quarantine": 43
+        "quarantine": N / A
     }, {
         "date": "11.12.20",
-        "quarantine": 12
+        "quarantine": N / A
     }, {
         "date": "18.12.20",
-        "quarantine": 11
+        "quarantine": N / A
     }, {
         "date": "08.01.21",
-        "quarantine": 6
+        "quarantine": N / A
     }, {
         "date": "15.01.21",
-        "quarantine": 8
+        "quarantine": N / A
     }, {
         "date": "22.01.21",
-        "quarantine": 4
+        "quarantine": N / A
     }, {
         "date": "29.01.21",
-        "quarantine": 1
+        "quarantine": N / A
     }, {
         "date": "05.02.21",
-        "quarantine": 5
+        "quarantine": N / A
     }, {
         "date": "12.02.21",
-        "quarantine": 3
+        "quarantine": N / A
     }, {
         "date": "05.03.21",
-        "quarantine": 6
+        "quarantine": N / A
     }, {
         "date": "12.03.21",
-        "quarantine": 5
+        "quarantine": N / A
     }, {
         "date": "19.03.21",
-        "quarantine": 18
+        "quarantine": N / A
     }, {
         "date": "26.03.21",
-        "quarantine": 5
+        "quarantine": N / A
     }, {
         "date": "16.04.21",
-        "quarantine": 10
+        "quarantine": N / A
     }, {
         "date": "07.05.21",
-        "quarantine": 5
+        "quarantine": N / A
     }]
 };
 
