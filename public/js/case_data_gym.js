@@ -5,70 +5,70 @@
 var jsonfile = {
    "jsonarray": [{//Create JSON Array;
       "date": "preCount",
-      "cases": 7
+      "cases": N / A
    }, {
       "date": "23.10.20",
-      "cases": 0
+      "cases": N / A
    }, {
       "date": "30.10.20",
-      "cases": 4
+      "cases": N / A
    }, {
       "date": "06.11.20",
-      "cases": 2
+      "cases": N / A
    }, {
       "date": "13.11.20",
-      "cases": 5
+      "cases": N / A
    }, {
       "date": "20.11.20",
-      "cases": 4
+      "cases": N / A
    }, {
       "date": "27.11.20",
-      "cases": 5
+      "cases": N / A
    }, {
       "date": "04.12.20",
-      "cases": 3
+      "cases": N / A
    }, {
       "date": "11.12.20",
-      "cases": 0
+      "cases": N / A
    }, {
       "date": "18.12.20",
-      "cases": 4
+      "cases": N / A
    }, {
       "date": "08.01.21",
-      "cases": 2
+      "cases": N / A
    }, {
       "date": "15.01.21",
-      "cases": 2
+      "cases": N / A
    }, {
       "date": "22.01.21",
-      "cases": 1
+      "cases": N / A
    }, {
       "date": "29.01.21",
-      "cases": 0
+      "cases": N / A
    }, {
       "date": "05.02.21",
-      "cases": 0
+      "cases": N / A
    }, {
       "date": "12.02.21",
-      "cases": 1
+      "cases": N / A
    }, {
       "date": "05.03.21",
-      "cases": 3
+      "cases": N / A
    }, {
       "date": "12.03.21",
-      "cases": 0
+      "cases": N / A
    }, {
       "date": "19.03.21",
-      "cases": 3
+      "cases": N / A
    }, {
       "date": "26.03.21",
-      "cases": 2
+      "cases": N / A
    }, {
       "date": "16.04.21",
-      "cases": 11
+      "cases": N / A
    }, {
       "date": "07.05.21",
-      "cases": 0
+      "cases": N / A
    }]
 };
 
