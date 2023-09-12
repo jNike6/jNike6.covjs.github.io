@@ -118,7 +118,7 @@ for (i = 0; i < jsonarray.length; i++) {     //Loop through the array;
 console.log('cases Tot:' + cTot);      //Log cTot;
 
 //Count cases per members;
-var s = 1350;      //#students and staff;
+var s = N / A;      //#students and staff;
 var cps = (cTot / s * 100);     //Divide cases by number of students (casesPerStudents);
 var cps_fix = cps.toFixed(1);     //Round cps to 1 decimal;
 
